@@ -104,6 +104,10 @@ javascript:(function(){fetch('https://your-worker.workers.dev/recommend?token=TO
 
 Replace `your-worker.workers.dev` and `TOKEN` with your actual worker URL and auth token.
 
+## Apple Shortcut
+
+Use this [Shortcut template](https://www.icloud.com/shortcuts/949e3162cbca41d1b7c8968a226b3be2) to save pages to Marginalia from the iOS/macOS share sheet. After installing, replace the URL and token with your own.
+
 ## Migrating from the Go version
 
 If you have an existing SQLite database from the Go version, export it and import into D1:
