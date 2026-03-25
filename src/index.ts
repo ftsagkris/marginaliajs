@@ -9,7 +9,14 @@ import { loadTheme } from "./themes";
 
 const app = new Hono<{ Bindings: Env }>();
 
-app.use("*", cors());
+app.use(
+  "*",
+  cors({
+    origin: "*",
+    allowMethods: ["GET", "POST", "DELETE", "OPTIONS"],
+    allowHeaders: ["Content-Type"],
+  }),
+);
 
 // Token auth middleware for write endpoints
 const requireToken = async (
