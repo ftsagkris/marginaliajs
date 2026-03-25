@@ -241,5 +241,5 @@ export function loadTheme(name: string | undefined): string {
       `Unknown theme "${name}". Valid themes: ${VALID_THEMES.join(", ")}`,
     );
   }
-  return css + "\n" + base;
+  return base + "\n" + css;
 }
