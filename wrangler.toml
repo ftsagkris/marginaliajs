@@ -5,6 +5,7 @@ compatibility_flags = ["nodejs_compat"]
 
 [vars]
 OWNER = ""
+THEME = "terminal"
 
 [[d1_databases]]
 binding = "DB"

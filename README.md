@@ -39,7 +39,16 @@ npx wrangler secret put TOKEN
 OWNER = "Filippos"
 ```
 
-7. Deploy:
+7. (Optional) Set the theme in `wrangler.toml` under `[vars]`:
+
+```toml
+[vars]
+THEME = "terminal"
+```
+
+Available themes: `terminal` (default), `classic`, `modern`, `daily`, `raw`, `win`.
+
+8. Deploy:
 
 ```sh
 npm run deploy

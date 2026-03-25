@@ -2,6 +2,7 @@ export interface Env {
   DB: D1Database;
   TOKEN: string;
   OWNER: string;
+  THEME: string;
 }
 
 export interface Recommendation {

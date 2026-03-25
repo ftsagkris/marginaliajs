@@ -5,6 +5,7 @@ import * as db from "./db";
 import { fromURL } from "./extract";
 import { renderRSS, ownerTitle } from "./feed";
 import { renderHTML } from "./html";
+import { loadTheme } from "./themes";
 
 const app = new Hono<{ Bindings: Env }>();
 
@@ -116,7 +117,8 @@ app.get("/rss", async (c) => {
 app.get("/", async (c) => {
   const recs = await db.all(c.env.DB);
   const title = ownerTitle(c.env.OWNER);
-  const html = renderHTML(recs, title);
+  const style = loadTheme(c.env.THEME);
+  const html = renderHTML(recs, title, style);
   return c.html(html);
 });
 
